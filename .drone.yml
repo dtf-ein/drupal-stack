@@ -7,6 +7,5 @@ steps:
 - name: Build
   image: geerlingguy/docker-ubuntu1804-ansible:testing
   commands:
-  - ansible-lint ./play_webserver.yml
   - ansible-galaxy install -r ./requirements.yml
   - ansible-playbook play_webserver.yml -i inv_localhost
