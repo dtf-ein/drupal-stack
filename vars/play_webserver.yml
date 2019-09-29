@@ -6,7 +6,7 @@ drupal_site_name: "Drupal Test"
 drupal_account_name: admin
 drupal_account_pass: admin
 drupal_deploy_dir: "/var/www/drupal"
-drupal_core_owner: root
+drupal_core_owner: "{{ ansible_user }}"
 drupal_core_owner_become: true
 drupal_core_path: "{{ drupal_deploy_dir }}/web"
 
