@@ -1,3 +1,5 @@
+[![Build Status](https://cloud.drone.io/api/badges/dtf-ein/drupal-stack/status.svg)](https://cloud.drone.io/dtf-ein/drupal-stack)
+
 # Drupal 8 Stack
 
 Drupal 8 stack running on Apache with MySQL.  
@@ -7,6 +9,7 @@ Drupal 8 stack running on Apache with MySQL.
 
 ```bash
 # Setup your system
+ansible-galaxy install -r ./requirements.yml
 ansible-playbook play_webserver.xml -i inv_localhost
 
 # Docker container you can use to test
