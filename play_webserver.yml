@@ -1,22 +1,6 @@
 ---
 
 - hosts: webserver
-  vars_files:
-    - vars/play_webserver.yml
-
-  tasks:
-  - name: Add drupal group
-    group:
-      name: drupal
-      state: present
-
-  - name: Add drupal core owner
-    user:
-      name: "{{drupal_core_owner}}"
-      comment: Drupal core owner
-      group: drupal
-
-- hosts: webserver
   become: yes
   vars_files:
     - vars/play_webserver.yml
@@ -36,4 +20,5 @@
 
   tasks:
   - name: Fix permissions
+    become: yes
     script: files/fixperms.sh --drupal_path="{{ drupal_core_path }}" --drupal_user="{{ drupal_core_owner }}"
