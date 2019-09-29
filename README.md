@@ -7,8 +7,6 @@ Drupal 8 stack running on Apache with MySQL.
 
 # Run
 
-Change `drupal_core_owner` in `/vars/play_webserver.yml` to a user on the your system that is a sudoer.
-
 ```bash
 # Setup your system
 ansible-galaxy install -r ./requirements.yml
