@@ -36,4 +36,4 @@
 
   tasks:
   - name: Fix permissions
-    script: files/fixperms.sh --drupal_path="{{drupal_core_path}}" --drupal_user="{{drupal_core_owner}}"
+    script: files/fixperms.sh --drupal_path="{{ drupal_core_path }}" --drupal_user="{{ drupal_core_owner }}"
