@@ -2,8 +2,6 @@
 
 - hosts: webserver
   become: yes
-  vars_files:
-    - vars/play_webserver.yml
   roles:
     - geerlingguy.apache
     - geerlingguy.git
@@ -13,12 +11,4 @@
     - geerlingguy.composer
     - geerlingguy.drush
     - geerlingguy.drupal
-
-- hosts: webserver
-  vars_files:
-    - vars/play_webserver.yml
-
-  tasks:
-  - name: Fix permissions
-    become: yes
-    script: files/fixperms.sh --drupal_path="{{ drupal_core_path }}" --drupal_user="{{ drupal_core_owner }}"
+    - fix-perms
