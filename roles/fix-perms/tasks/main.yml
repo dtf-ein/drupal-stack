@@ -1,0 +1,4 @@
+---
+
+- name: Fix permissions of Drupal directories
+  script: fixperms.sh --drupal_path="{{ drupal_core_path }}" --drupal_user="{{ drupal_core_owner }}"
